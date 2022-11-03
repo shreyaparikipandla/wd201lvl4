@@ -1,8 +1,7 @@
-// __tests__/todo.js
 let todoList = require("../todo");
 
 const { all, markAsComplete, add, overdue, dueToday, dueLater } = todoList();
-/* eslint-disable no-undef */
+
 describe("Todo List Test Suite", () => {
   beforeAll(() => {
     // Seed the test data
@@ -10,19 +9,19 @@ describe("Todo List Test Suite", () => {
     const oneDay = 60 * 60 * 24 * 1000;
     [
       {
-        title: "Buy milk",
+        title: "complete assignment",
         completed: false,
         dueDate: new Date(today.getTime() - 2 * oneDay).toLocaleDateString(
           "en-CA"
         ),
       },
       {
-        title: "Pay rent",
+        title: "Pay the bills",
         completed: false,
         dueDate: new Date().toLocaleDateString("en-CA"),
       },
       {
-        title: "Submit assignment",
+        title: "do chores",
         completed: false,
         dueDate: new Date(today.getTime() + 2 * oneDay).toLocaleDateString(
           "en-CA"
